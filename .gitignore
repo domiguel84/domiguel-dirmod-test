@@ -1,0 +1,11 @@
+﻿################################################################################
+# Este archivo .gitignore ha sido creado automáticamente por Microsoft(R) Visual Studio.
+################################################################################
+
+*.suo
+/CurrencyRates/CurrencyRate.Api/bin/Debug/netcoreapp3.1
+/CurrencyRates/CurrencyRate.Api/obj
+/CurrencyRates/CurrencyRate.Application/obj
+/CurrencyRates/CurrencyRate.Domain/obj
+/CurrencyRates/CurrencyRate.Infraestructure.Data/obj
+/CurrencyRates/.vs/CurrencyRates/config
