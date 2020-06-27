@@ -2,12 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CurrencyRate.Domain.Interfaces
 {
-    public interface IQuotationService
+    public interface ICurrencyQuotation
     {
-        Quote GetQuote(string source, string target);
+        Quote GetQuotation();
     }
 }

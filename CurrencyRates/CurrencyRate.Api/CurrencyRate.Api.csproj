@@ -4,5 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CurrencyRate.Application\CurrencyRate.Application.csproj" />
+    <ProjectReference Include="..\CurrencyRate.Domain\CurrencyRate.Domain.csproj" />
+    <ProjectReference Include="..\CurrencyRates.IoC\CurrencyRates.IoC.csproj" />
+  </ItemGroup>
+
 
 </Project>

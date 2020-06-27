@@ -9,3 +9,8 @@
 /CurrencyRates/CurrencyRate.Domain/obj
 /CurrencyRates/CurrencyRate.Infraestructure.Data/obj
 /CurrencyRates/.vs/CurrencyRates/config
+/CurrencyRates/CurrencyRate.Application/bin/Debug/netstandard2.0
+/CurrencyRates/CurrencyRate.Domain/bin/Debug/netstandard2.0
+/CurrencyRates/CurrencyRate.Infraestructure.Data/bin/Debug/netstandard2.0
+/CurrencyRates/CurrencyRates.IoC/bin/Debug/netstandard2.0
+/CurrencyRates/CurrencyRates.IoC/obj
