@@ -25,9 +25,19 @@ namespace CurrencyRate.Api.Controllers
 
         [HttpGet]
         [Route("cotizacion/{currency}")]
-        public Quote Get(string currency)
+        public IActionResult Get(string currency)
         {
-            return _currencyQuotationFactory.GetCurrencyQuotationService(currency).GetQuotation();
+            try
+            {
+                ICurrencyQuotation currencyQuotation = _currencyQuotationFactory.GetCurrencyQuotationService(currency);
+                Quote Quote = currencyQuotation.GetQuotation();
+                return Ok(new { moneda = currency, precio = Quote.Value });
+            }
+            catch
+            {
+                return BadRequest("Se produjo un error inesperado");
+            }
+            
         }
     }
 }

@@ -12,11 +12,22 @@ namespace CurrencyRate.Infraestructure.Data.Services
 {
     public class CambioTodayService : IQuotationService
     {
-
+        private readonly ICustomConfiguration _configuration;
+        public CambioTodayService(ICustomConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+        /// <summary>
+        /// Obtiene la cotización de una moneda utilizando el servicio de Cambio Today
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="target"></param>
+        /// <returns></returns>
         public Quote GetQuote(string source, string target)
         {
             HttpClient client = new HttpClient();
-            string url = string.Format("https://api.cambio.today/v1/quotes/{0}/{1}/json?quantity=1&key=4590|qm~YLauEeoQuEayGD9954TQQUUFKyOHz", source, target);
+            string url = string.Format(_configuration.GetCambioTodayUrl(), source, target, 
+                _configuration.GetCambioTodayKey());
             var task = client.GetStringAsync(url).GetAwaiter().GetResult();
             JsonResponse todayResponse =  JsonConvert.DeserializeObject<JsonResponse>(task);
 
