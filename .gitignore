@@ -6,3 +6,5 @@
 bin
 obj
 packages
+/CurrencyRates/CurrencyRate.Api/Properties/PublishProfiles
+/CurrencyRates/.vs/CurrencyRates/DesignTimeBuild
