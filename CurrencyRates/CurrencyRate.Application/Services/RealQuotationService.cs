@@ -1,4 +1,5 @@
-﻿using CurrencyRate.Domain.Interfaces;
+﻿using CurrencyRate.Domain.Enums;
+using CurrencyRate.Domain.Interfaces;
 using CurrencyRate.Domain.Models;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace CurrencyRate.Application.Services
         }
         public Quote GetQuotation()
         {
-            return _quotationService.GetQuote("BRL", "ARS");
+            return _quotationService.GetQuote(CurrencyEnum.BRL.ToString(), CurrencyEnum.ARS.ToString());
         }
     }
 }
